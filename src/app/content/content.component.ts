@@ -11,8 +11,12 @@ export class ContentComponent implements OnInit {
   item: number = 0;
   arrayValue: number;
   currentArray = [];
-
   arrayItem: any;
+
+  mapSelect: any = true;
+  everySelect: any = false;
+  someSelect: any = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -36,11 +40,28 @@ export class ContentComponent implements OnInit {
       this.currentArray.push(this.arrayValue);
       element.style.height = this.getheight();
     }
-
   }
 
   getheight() {
     return this.arrayValue + `px`
+  }
+
+  selectMethod(method: any) {
+    if (method == 'every') {
+      this.everySelect = true;
+      this.mapSelect = false;
+      this.someSelect = false;
+    }
+    if (method == 'map') {
+      this.everySelect = false;
+      this.mapSelect = true;
+      this.someSelect = false;
+    }
+    if (method == 'some') {
+      this.everySelect = false;
+      this.mapSelect = false;
+      this.someSelect = true;
+    }
   }
 
   visualize() {
@@ -67,16 +88,30 @@ export class ContentComponent implements OnInit {
 
   showOutput() {
     this.output.nativeElement.innerHTML = '';
-    this.output.nativeElement.innerHTML = this.everyFunction();
+    if (this.mapSelect) {
+      this.output.nativeElement.innerHTML = this.mapFunction();
+    }
+    if (this.everySelect) {
+      this.output.nativeElement.innerHTML = this.everyFunction();
+    }
+    if (this.someSelect) {
+      this.output.nativeElement.innerHTML = this.someFunction();
+    }
   }
 
   mapFunction() {
     return this.currentArray.map(element => element + ` hi`)
   }
 
-  everyFunction(){
+  everyFunction() {
     return this.currentArray.every(element => element > 20)
- }
+  }
+
+  someFunction() {
+    return this.currentArray.some(element => element > 20)
+  }
+
+
   refreshBackground() {
     this.item = 0;
     let elements: any = Array.from(document.getElementsByClassName('array_element'));

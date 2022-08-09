@@ -1,12 +1,36 @@
 <div class="main_wrapper d_flex_column">
     <div class="function_div d_flex_column">
-        <div class="d_flex">
+        <div *ngIf="mapSelect" class="d_flex">
             <h2><b class="yellow">visualize( ) </b></h2>
             <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
             <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
                     class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi` </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="everySelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">every</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 20 </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="someSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">some</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 100</b> <b
                     class="white_color"> )</b>
             </h2>
             <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
@@ -18,6 +42,10 @@
             <button (click)="generateArr()" class="let_btn">new arr</button>
             <button (click)="visualize()" class="visualize_btn">visualize<b class="white_color">( )</b></button>
         </div>
+
+        <button (click)="selectMethod('map')">map</button>
+        <button (click)="selectMethod('every')">every</button>
+        <button (click)="selectMethod('some')">some</button>
         <div class="let_wrapper d_flex">
             <h2>let arr =</h2>
         </div>

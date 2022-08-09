@@ -68,7 +68,6 @@
 .let_btn {
     outline: none;
     border: none;
-    border-radius: 5px;
     font-size: 23px;
     background: #ecf0f1;
     color: #2e2e2e;
@@ -78,12 +77,13 @@
     font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .visualize_btn {
     outline: none;
     border: none;
-    border-radius: 5px;
+
     font-size: 23px;
     background: #ecf0f1;
     color: #2e2e2e;
@@ -93,6 +93,7 @@
     font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .let_wrapper {
