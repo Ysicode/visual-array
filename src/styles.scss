@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Asap', sans-serif;
+    background: #ecf0f1;
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d_none {
+    display: none;
+}
+
+.d_flex_column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.d_flex_space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

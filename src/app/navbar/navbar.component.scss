@@ -1,0 +1,49 @@
+.navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    background: #ecf0f1;
+}
+
+.logo {
+    margin-left: 60px;
+
+    .visual_logo {
+        color: #424949;
+        font-size: 35px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 17px;
+    }
+
+    .array_logo {
+        font-size: 50px;
+        background: -webkit-linear-gradient(#11998e, #38ef7d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0px;
+        margin-top: -26px;
+    }
+}
+
+.links {
+    margin-right: 60px;
+
+    .methods_btn {
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        font-size: 20px;
+        background: #e7cc1a;
+        color: #424949;
+        width: 130px;
+        height: 38px;
+
+        &:hover {
+            background: #e0c61a;
+            cursor: pointer;
+        }
+    }
+}
