@@ -60,8 +60,6 @@
     }
 }
 
-.array_div {
-}
 
 .buttons_wrapper {
     margin-top: 40px;
@@ -129,7 +127,7 @@
     }
 
     .array_element {
-        height: 200px;
+       
         margin-left: 1.5px;
         margin-right: 1.5px;
         width: 5px;
@@ -149,5 +147,25 @@
         border-bottom: 5px solid black;
         height: 290px;
         width: 20px;
+    }    
+}
+
+.footer_wrapper {
+    margin-top: 50px;
+    width: 80%;
+}
+.console {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    bottom: 0px;
+    padding: 16px;
+    background: #2e2e2e;
+
+    .output_text {
+        color: white;
     }
 }

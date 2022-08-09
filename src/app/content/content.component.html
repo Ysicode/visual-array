@@ -6,7 +6,7 @@
             <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
                     class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
-                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> 5 </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi` </b> <b
                     class="white_color"> )</b>
             </h2>
             <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
@@ -25,17 +25,25 @@
             <div class="left_bracket_div">
                 <div class="left_bracket"></div>
             </div>
-
             <div #array class="array">
-                <div *ngFor="let item of myArr" let i = index [ngStyle]="{'height.px': generateArr()}" class="array_element">
+                <div *ngFor="let item of myArr" let i = index class="array_element" >                
                 </div>
             </div>
-
             <div class="right_bracket_div">
                 <div class="right_bracket"></div>
             </div>
-
         </div>
+    </div>
 
+    <div class="footer_wrapper d_flex">
+        <div class="console">
+            <h2 class="output_text">Output</h2>
+            <div class="d_flex">
+                
+                <div #output class="output"></div>
+               
+            </div>
+            
+        </div>
     </div>
 </div>
