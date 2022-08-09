@@ -3,27 +3,20 @@
 }
 
 .function_div {
-    background: #424949;
+    background: #2e2e2e;
     padding-left: 16px;
     padding-right: 16px;
-    height: 80px;
+    height: 100px;
     width: 100%;
 
-    .visualize_btn {
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        font-size: 23px;
-        background: #636666;
-        color: #e7cc1a;
-        width: 150px;
-        box-shadow: 0px 0px 10px -1px #1a1a1a;
-        height: 48px;
-        font-weight: bold;
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .white_color {
         color: #ecf0f1;
+        font-weight: 500;
     }
 
     .left_bracket {
@@ -43,13 +36,118 @@
     .return {
         color: #cc91ca;
         margin-right: 10px;
+        font-weight: 500;
     }
 
     .blue {
         color: #60a6de;
+        font-weight: 500;
     }
 
     .lightblue {
         color: #a5e1ff;
+        font-weight: 500;
+    }
+
+    .yellow {
+        color: #e3e37d;
+        font-weight: 500;
+    }
+
+    .green {
+        color: #bdd4af;
+        font-weight: 500;
+    }
+}
+
+.array_div {
+}
+
+.buttons_wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.let_btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 23px;
+    background: #ecf0f1;
+    color: #2e2e2e;
+    border: 2px solid black;
+    width: 150px;
+    height: 48px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.visualize_btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 23px;
+    background: #ecf0f1;
+    color: #2e2e2e;
+    border: 2px solid black;
+    width: 150px;
+    height: 48px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.let_wrapper {
+    margin-bottom: 20px;
+}
+
+.array_wrapper {
+    .left_bracket_div {
+        position: relative;
+        border-left: 5px solid black;
+        height: 300px;
+        width: 20px;
+    }
+
+    .left_bracket {
+        position: absolute;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        height: 290px;
+        width: 20px;
+    }
+
+    .array {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 270px;
+        // background: grey;
+        width: 500px;
+    }
+
+    .array_element {
+        height: 200px;
+        margin-left: 1.5px;
+        margin-right: 1.5px;
+        width: 5px;
+        background: linear-gradient(#11998e, #38ef7d);
+    }
+
+    .right_bracket_div {
+        position: relative;
+        border-right: 5px solid black;
+        height: 300px;
+        width: 20px;
+    }
+
+    .right_bracket {
+        position: absolute;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        height: 290px;
+        width: 20px;
     }
 }

@@ -1,10 +1,40 @@
 <div class="main_wrapper d_flex_column">
-    <div class="function_div d_flex">
-        <button class="visualize_btn">visualize <b class="white_color">( )</b></button>
+    <div class="function_div d_flex_column">
         <div class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
             <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b> <b class="lightblue">arr</b> <b class="white_color">.</b> <b>map</b> <b class="white_color">(</b> <b>element</b>  <b>=></b> <b>element</b>  <b class="white_color">+</b>  <b>5</b>  <b class="white_color">)</b> </h2>
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> 5 </b> <b
+                    class="white_color"> )</b>
+            </h2>
             <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+    </div>
+
+    <div class="array_div d_flex_column">
+        <div class="buttons_wrapper d_flex">
+            <button (click)="generateArr()" class="let_btn">new arr</button>
+            <button (click)="visualize()" class="visualize_btn">visualize<b class="white_color">( )</b></button>
+        </div>
+        <div class="let_wrapper d_flex">
+            <h2>let arr =</h2>
+        </div>
+        <div class="array_wrapper d_flex">
+            <div class="left_bracket_div">
+                <div class="left_bracket"></div>
+            </div>
+
+            <div #array class="array">
+                <div *ngFor="let item of myArr" let i = index [ngStyle]="{'height.px': generateArr()}" class="array_element">
+                </div>
+            </div>
+
+            <div class="right_bracket_div">
+                <div class="right_bracket"></div>
+            </div>
+
         </div>
 
     </div>
