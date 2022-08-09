@@ -58,7 +58,7 @@ export class ContentComponent implements OnInit {
       return
     }
     let arrElement = elements[this.item];
-    arrElement.style.background = `red`;
+    arrElement.style.background = `#cc91ca`;
     this.item++;
     setTimeout(() => {
       this.animate(elements);
@@ -66,14 +66,17 @@ export class ContentComponent implements OnInit {
   }
 
   showOutput() {
-  
-    this.output.nativeElement.innerHTML = this.mapFunction();
+    this.output.nativeElement.innerHTML = '';
+    this.output.nativeElement.innerHTML = this.everyFunction();
   }
 
   mapFunction() {
     return this.currentArray.map(element => element + ` hi`)
   }
 
+  everyFunction(){
+    return this.currentArray.every(element => element > 20)
+ }
   refreshBackground() {
     this.item = 0;
     let elements: any = Array.from(document.getElementsByClassName('array_element'));
