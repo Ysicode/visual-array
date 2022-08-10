@@ -8,7 +8,6 @@
 }
 
 .logo {
-    margin-left: 60px;
 
     .visual_logo {
         color: #424949;
@@ -19,37 +18,11 @@
     }
 
     .array_logo {
-        font-size: 45px;
+        font-size: 40px;
         background: -webkit-linear-gradient(#9a9a04, #e0dd00);;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
         margin-top: 0px;
-    }
-}
-
-.links {
-    margin-right: 60px;
-
-    .methods_btn {
-        outline: none;
-        border: none;
-        border: 2px solid black;
-        font-size: 23px;
-        background: #ecf0f1;
-        color: #2e2e2e;
-        
-        width: 150px;
-        height: 48px;
-        font-weight: 500;
-        margin-left: 10px;
-        margin-right: 10px;
-        transition: all 250ms ease;
-
-        &:hover {
-            background: linear-gradient(#11998e, #38ef7d);
-            border: 2px solid #ecf0f1;
-            cursor: pointer;
-        }
     }
 }

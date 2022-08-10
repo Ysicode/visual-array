@@ -1,3 +1,136 @@
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
+
+
+<div class="main_wrapper d_flex_column">
+    <div class="function_div d_flex_column">
+        <div *ngIf="methods.mapSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi` </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.everySelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">every</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 20 </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.someSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">some</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 100</b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.filterSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">filter</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 200</b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.sortSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">sort</b> <b
+                    class="white_color">( </b><b class="white_color">( </b> <b class="lightblue"> a</b><b class="white_color">, <b class="lightblue"> b </b><b class="white_color"> ) </b></b> <b class="blue"> => </b><b class="lightblue"> a</b><b class="white_color"> ></b> <b class="lightblue"> b</b> <b class="white_color"> ?</b>
+                 <b class="green"> 1</b> <b class="white_color"> : </b><b class="green"> -1</b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.findSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">find</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> == </b> <b class="green"> {{ getValue() }}</b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.findIndexSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">findIndex</b> <b
+                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> == </b> <b class="green"> {{ getValue() }}</b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+       
+    </div>
+    <div [class.openMethods]="showMethodButtons" class="methods_div d_flex">
+        <button class="method_btn"  (click)="selectMethod('mapSelect')">map( )</button>
+        <button class="method_btn" (click)="selectMethod('everySelect')">every( )</button>
+        <button class="method_btn" (click)="selectMethod('someSelect')">some( )</button>
+        <button class="method_btn" (click)="selectMethod('filterSelect')">filter( )</button>
+        <button class="method_btn" (click)="selectMethod('sortSelect')">sort( )</button>
+        <button class="method_btn" (click)="selectMethod('findSelect')">find( )</button>
+        <button class="method_btn" (click)="selectMethod('findIndexSelect')">find Index( )</button>
+    </div>
+    <div class="array_div d_flex_column">
+        <div class="buttons_wrapper d_flex">
+            <button (click)="openMethods()" class="let_btn">methods</button>
+            <button (click)="generateArr()" class="let_btn">new arr</button>
+            <button (click)="visualize()" class="let_btn">visualize<b class="white_color">( )</b></button>
+        </div>
+
+        <div class="let_wrapper d_flex">
+            <h2>let arr =</h2>
+        </div>
+        <div class="array_wrapper d_flex">
+            <div class="left_bracket_div">
+                <div class="left_bracket"></div>
+            </div>
+            <div #array class="array">
+                <div *ngFor="let item of myArr" let i = index class="array_element" >                
+                </div>
+            </div>
+            <div class="right_bracket_div">
+                <div class="right_bracket"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_wrapper d_flex">
+        <div class="console">
+            <h2 class="output_text">Output</h2>
+            <div class="d_flex">
+                
+                <div #output class="output"></div>
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
 <app-footer></app-footer>
