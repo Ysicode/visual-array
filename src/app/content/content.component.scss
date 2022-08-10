@@ -129,7 +129,7 @@
         margin-left: 1.5px;
         margin-right: 1.5px;
         width: 5px;
-        background: linear-gradient(#11998e, #38ef7d);
+        background: linear-gradient(#9a9a04, #e0dd00);
     }
 
     .right_bracket_div {
@@ -159,6 +159,7 @@
     flex-direction: column;
     height: 300px;
     width: 100%;
+    max-width: 1000px;
     bottom: 0px;
     padding: 16px;
     background: #2e2e2e;
