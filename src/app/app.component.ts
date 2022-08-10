@@ -19,10 +19,10 @@ export class AppComponent {
   findElement: number = Math.floor(Math.random() * 60);
 
   methods = {
-    mapSelect: true,
+    mapSelect: false,
     everySelect: false,
     someSelect: false,
-    filterSelect: false,
+    filterSelect: true,
     sortSelect: false,
     findSelect: false,
     findIndexSelect: false
@@ -119,7 +119,7 @@ export class AppComponent {
     this.item++;
     setTimeout(() => {
       this.animate(elements);
-    }, 10)
+    }, 20)
   }
 
 
@@ -136,7 +136,7 @@ export class AppComponent {
     this.sortedItem++;
     setTimeout(() => {
       this.animateSortedArray(elements);
-    }, 10)
+    }, 20)
   }
 
   checkMatchingItems(arrElement: any) {

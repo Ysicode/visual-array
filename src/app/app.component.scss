@@ -95,12 +95,13 @@
     font-weight: 500;
     margin: 10px;
     cursor: pointer;
+
     &:hover {
-        border: 2px solid linear-gradient(#9a9a04, #e0dd00) !important;
+        border: 2px solid #b7b500 !important;
     }
 }
 
-.let_btn {
+.action_btn {
     outline: none;
     border: none;
     font-size: 23px;
@@ -113,6 +114,10 @@
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+
+    &:hover {
+        border: 2px solid #b7b500 !important;
+    }
 }
 
 .let_wrapper {
