@@ -11,21 +11,27 @@ export class AppComponent {
   @ViewChild("output") output: ElementRef;
   myArr = Array(62);
   showMethodButtons = false;
-  item: number = 0;
+  currentArrayIndex: number = 0;
   sortedItem: number = 0;
   arrayValue: number;
   currentArray = [];
+  reverseCurrentArray = [];
+  reverseCurrentArrayIndex: number = 61;
   arrayItem: any;
+  sortPosI = 0;
+  sortPosJ: any;
   findElement: number = Math.floor(Math.random() * 60);
 
   methods = {
     mapSelect: false,
     everySelect: false,
     someSelect: false,
-    filterSelect: true,
-    sortSelect: false,
+    filterSelect: false,
+    sortSelect: true,
     findSelect: false,
-    findIndexSelect: false
+    findIndexSelect: false,
+    includesSelect: false,
+    reverseSelect: false
   }
 
   constructor() { }
@@ -65,82 +71,123 @@ export class AppComponent {
 
   selectMethod(index: string) {
     this.generateArr();
-    this. openMethods();
+    this.openMethods();
     for (let key in this.methods) {
       this.methods[key] = false;
       this.methods[index] = true;
     }
   }
 
+  getElements() {
+    return Array.from(document.getElementsByClassName('array_element'));
+  }
+
   visualize() {
     this.output.nativeElement.innerHTML = '';
-    let elements = Array.from(document.getElementsByClassName('array_element'));
+    let elements = this.getElements();
     elements.forEach((element: any) => {
       element.style.background = '';
       element.style.background = 'linear-gradient(#9a9a04, #e0dd00);'
     })
-    this.item = 0;
+    this.currentArrayIndex = 0;
     this.animate(elements);
   }
 
-
-
   animate(elements: any) {
-    if (this.item == 62) {
-      if (this.methods.sortSelect) {
-        this.insertionSort();
-        this.animateSortedArray(elements);
-      }
-      this.showOutput();
+    let arrElement = elements[this.currentArrayIndex];
+    if (this.methods.reverseSelect) {
+      this.reverseArray();
+      this.animateReverseArray(elements);
       return
     }
-    let arrElement = elements[this.item];
-    arrElement.style.background = `#cc91ca`;
+    if (this.methods.sortSelect) {
+      this.insertionSort(elements);
+    } else {
+      if (this.currentArrayIndex == 62) {
+        this.showOutput();
+        return
+      }
+      arrElement.style.background = `#cc91ca`;
+      this.checkSelectedMethod(arrElement);
+      this.currentArrayIndex++;
+      this.animateSpeed(elements, 20)
+    }
+  }
 
+  animateSpeed(elements: any, speed: number) {
+    setTimeout(() => {
+      this.animate(elements);
+    }, speed)
+  }
+
+  checkSelectedMethod(arrElement: any) {
     if (this.methods.filterSelect) {
       this.checkMatchingItems(arrElement);
     }
     if (this.methods.findSelect) {
-      const element = this.currentArray.find(element => element == this.currentArray[this.findElement])
-      if (this.currentArray[this.item] == element) {
-        arrElement.style.background = `red`;
-        this.showOutput();
-        return
-      }
+      this.findSameElement(arrElement);
     }
     if (this.methods.findIndexSelect) {
-      const element = this.currentArray.findIndex(element => element == this.currentArray[this.findElement])
-      if (this.item == element) {
-        arrElement.style.background = `red`;
-        this.showOutput();
-        return
-      }
+      this.findIndexOfElement(arrElement);
     }
-    this.item++;
-    setTimeout(() => {
-      this.animate(elements);
-    }, 20)
+    if (this.methods.includesSelect) {
+      this.findSameElement(arrElement);
+    }
+
   }
 
+  findIndexOfElement(arrElement: any) {
+    const element = this.currentArray.findIndex(element => element == this.currentArray[this.findElement])
+    if (this.currentArrayIndex == element) {
+      arrElement.style.background = `red`;
+      this.showOutput();
+    }
+  }
 
+  findSameElement(arrElement: any) {
+    const element = this.currentArray.find(element => element == this.currentArray[this.findElement])
+    if (this.currentArray[this.currentArrayIndex] == element) {
+      arrElement.style.background = `red`;
+      this.showOutput();
+    }
+  }
 
-  animateSortedArray(elements: any) {
-    if (this.sortedItem == 62) {
-      this.sortedItem = 0;
+  animateReverseArray(elements: any) {
+    if (this.currentArrayIndex == 31) {
+      this.reverseAnimationEnd();
       return
     }
-    let arrElement = elements[this.sortedItem];
-    console.log(arrElement)
-    arrElement.style.background = `linear-gradient(#9a9a04, #e0dd00);`;
-    arrElement.style.height = this.getheight(this.sortedItem);
-    this.sortedItem++;
+
+    this.startReverseAnimation(elements);
+      this.currentArrayIndex++;
+      this.reverseCurrentArrayIndex--;
+  
     setTimeout(() => {
-      this.animateSortedArray(elements);
-    }, 20)
+      this.animateReverseArray(elements);
+    }, 100)
+  }
+
+  reverseAnimationEnd() {
+    this.currentArrayIndex = 0;
+    this.reverseCurrentArrayIndex = 61;
+    this.showOutput();
+  }
+
+  startReverseAnimation(elements: any) {
+    elements[this.currentArrayIndex].style.background = '#cc91ca';
+    elements[this.currentArrayIndex].style.height = this.currentArray[this.reverseCurrentArrayIndex] + `px`;
+    elements[this.reverseCurrentArrayIndex].style.background = '#cc91ca';
+    elements[this.reverseCurrentArrayIndex].style.height = this.currentArray[this.currentArrayIndex] + `px`;
+  }
+
+  async reverseArray() {
+    for (let i = this.currentArray.length - 1; i >= 0; i--) {
+      this.reverseCurrentArray.push(this.currentArray[i]);
+    }
   }
 
   checkMatchingItems(arrElement: any) {
-    if (this.currentArray[this.item] > 200) {
+    if (this.currentArray[this.currentArrayIndex] > 200) {
       arrElement.style.background = `red`;
     }
   }
@@ -160,7 +207,6 @@ export class AppComponent {
       this.output.nativeElement.innerHTML = this.filterFunction();
     }
     if (this.methods.sortSelect) {
-      this.sortFunction();
       this.output.nativeElement.innerHTML = this.currentArray.join(', ');
     }
     if (this.methods.findSelect) {
@@ -168,6 +214,13 @@ export class AppComponent {
     }
     if (this.methods.findIndexSelect) {
       this.output.nativeElement.innerHTML = this.findIndexFunction();
+    }
+    if (this.methods.includesSelect) {
+      this.output.nativeElement.innerHTML = this.includesFunction();
+    }
+    if (this.methods.reverseSelect) {
+      this.reverseFunction();
+      this.output.nativeElement.innerHTML = this.currentArray.join(', '); 
     }
   }
 
@@ -199,10 +252,16 @@ export class AppComponent {
     return this.currentArray.findIndex(element => element == this.currentArray[this.findElement])
   }
 
+  includesFunction() {
+    return this.currentArray.includes(this.currentArray[this.findElement])
+  }
 
+  reverseFunction() {
+    return this.currentArray.reverse();
+  }
 
   refreshBackground() {
-    this.item = 0;
+    this.currentArrayIndex = 0;
     let elements: any = Array.from(document.getElementsByClassName('array_element'));
     elements.forEach((element: any) => {
       element.style.background = '';
@@ -210,15 +269,31 @@ export class AppComponent {
     })
   }
 
-  async insertionSort() {
-    for (let i = 1; i < this.currentArray.length; i++) {
-      // Start comparing current element with every element before it
-      for (let j = i - 1; j > -1; j--) {
-
-        // Swap elements as required
-        if (this.currentArray[j + 1] < this.currentArray[j]) {
-          [this.currentArray[j + 1], this.currentArray[j]] = [this.currentArray[j], this.currentArray[j + 1]];
+  insertionSort(elements: any) {
+    if (this.sortPosI == 62) {
+      this.sortPosI = 0;
+      this.showOutput();
+      return
+    } else {
+      elements[this.sortPosI].style.background = '#cc91ca'
+      if (this.sortPosI < this.currentArray.length) {
+        this.sortPosI++
+        let current = this.currentArray[this.sortPosI];
+        this.sortPosJ = this.sortPosI - 1;
+        while (this.sortPosJ > -1 && (current < this.currentArray[this.sortPosJ])) {
+          this.currentArray[this.sortPosJ + 1] = this.currentArray[this.sortPosJ];
+          this.sortPosJ--;
         }
+        this.currentArray[this.sortPosJ + 1] = current;
+      }
+
+      setTimeout(() => {
+        this.insertionSort(elements)
+      }, 100)
+
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        element.style.height = this.getheight(i);
       }
     }
   }

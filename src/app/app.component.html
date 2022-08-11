@@ -15,6 +15,28 @@
             <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
         </div>
 
+        <div *ngIf="methods.includesSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">includes</b> <b
+                    class="white_color">( </b> <b class="green"> {{ getValue() }} </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
+        <div *ngIf="methods.reverseSelect" class="d_flex">
+            <h2><b class="yellow">visualize( ) </b></h2>
+            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+                <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">reverse</b> <b
+                    class="white_color">( </b> <b
+                    class="white_color"> )</b>
+            </h2>
+            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+        </div>
+
         <div *ngIf="methods.everySelect" class="d_flex">
             <h2><b class="yellow">visualize( ) </b></h2>
             <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
@@ -89,13 +111,17 @@
        
     </div>
     <div [class.openMethods]="showMethodButtons" class="methods_div d_flex">
-        <button class="method_btn"  (click)="selectMethod('mapSelect')">map( )</button>
-        <button class="method_btn" (click)="selectMethod('everySelect')">every( )</button>
-        <button class="method_btn" (click)="selectMethod('someSelect')">some( )</button>
-        <button class="method_btn" (click)="selectMethod('filterSelect')">filter( )</button>
-        <button class="method_btn" (click)="selectMethod('sortSelect')">sort( )</button>
-        <button class="method_btn" (click)="selectMethod('findSelect')">find( )</button>
-        <button class="method_btn" (click)="selectMethod('findIndexSelect')">find Index( )</button>
+        <button class="method_btn"  (click)="selectMethod('mapSelect')">map</button>
+        <button class="method_btn" (click)="selectMethod('everySelect')">every</button>
+        <button class="method_btn" (click)="selectMethod('someSelect')">some</button>
+        <button class="method_btn" (click)="selectMethod('filterSelect')">filter</button>
+        <button class="method_btn" (click)="selectMethod('sortSelect')">sort</button>
+        <button class="method_btn" (click)="selectMethod('findSelect')">find</button>
+        <button class="method_btn" (click)="selectMethod('findIndexSelect')">find Index</button>
+        <button class="method_btn" (click)="selectMethod('includesSelect')">includes</button>
+        <button class="method_btn" (click)="selectMethod('reverseSelect')">reverse</button>
+
+
     </div>
     <div class="array_div d_flex_column">
         <div class="buttons_wrapper d_flex">
