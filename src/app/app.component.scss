@@ -1,5 +1,5 @@
 .main_wrapper {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .function_div {
@@ -187,7 +187,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    
+
     width: 100%;
     max-width: 1000px;
     bottom: 0px;
@@ -203,4 +203,61 @@
         font-size: 17px;
         margin-bottom: 16px;
     }
+}
+
+@media (max-width: 650px) {
+    .array_element {
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+        width: 3px !important;
+    }
+
+    .array {
+        width: 316px !important;
+    }
+
+    .buttons_wrapper {
+        margin-bottom: 10px;
+    }
+
+    .action_btn {
+        width: 90px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .footer_wrapper {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .function_div {
+       height: 50px;
+
+        h2 {
+            font-size: 15px !important;
+        }
+    }
+
+    .method_btn {
+        font-size: 13px;
+        
+        width: 75px;
+    }
+
+
+        .openMethods {
+            .method_btn {
+                height: 30px !important;
+                transform: scale(1);
+            }
+        }
+      
+        .methods_div {
+            width: 100%;
+            max-width: 95%;
+        }
+    
+   
+
 }

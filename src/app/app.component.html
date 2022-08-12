@@ -4,15 +4,15 @@
 <div class="main_wrapper d_flex_column">
     <div class="function_div d_flex_column">
         <div *ngIf="methods.mapSelect" class="d_flex">
-            <h2><b class="yellow">visualize( ) </b></h2>
-            <img class="left_bracket" src="assets/img/left_curly_bracket.png" alt="">
+           
+            
             <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
                     class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi` </b> <b
                     class="white_color"> )</b>
             </h2>
-            <img class="right_bracket" src="assets/img/right_curly_brackets.png" alt="">
+           
         </div>
 
         <div *ngIf="methods.includesSelect" class="d_flex">
@@ -127,7 +127,7 @@
         <div class="buttons_wrapper d_flex">
             <button (click)="openMethods()" class="action_btn">methods</button>
             <button (click)="generateArr()" class="action_btn">new arr</button>
-            <button (click)="visualize()" class="action_btn">visualize<b class="white_color">( )</b></button>
+            <button (click)="visualize()" class="action_btn">visualize</button>
         </div>
 
         <div class="let_wrapper d_flex">
