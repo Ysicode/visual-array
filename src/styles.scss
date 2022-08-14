@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     background: #ecf0f1;
 }
 
@@ -27,3 +27,11 @@ body {
     justify-content: space-between;
 }
 
+.secteion_bar {
+    width: 50%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #2e2e2e;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

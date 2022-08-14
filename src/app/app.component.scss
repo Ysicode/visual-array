@@ -1,11 +1,9 @@
 .main_wrapper {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .function_div {
     background: #2e2e2e;
-    padding-left: 16px;
-    padding-right: 16px;
     height: 100px;
     width: 100%;
 
@@ -67,7 +65,7 @@
     justify-content: center;
     margin-top: 0px;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1700px;
     transform: scale(0);
     transition: all 100ms ease-in-out;
 }
@@ -79,13 +77,14 @@
 
     .method_btn {
         height: 40px;
+        margin: 10px !important;
         transform: scale(1);
     }
 }
 
 .buttons_wrapper {
     margin-bottom: 40px;
-    margin-top: 0px;
+    margin-top: 40px;
 }
 
 .method_btn {
@@ -94,17 +93,20 @@
     font-size: 15px;
     background: #ecf0f1;
     color: #2e2e2e;
-    border: 2px solid black;
+    border: 2px solid #2e2e2e;
+    border-radius: 10px;
     width: 100px;
     height: 0px;
     transform: scale(0);
     font-weight: 500;
-    margin: 10px;
+    margin: 0px;
     transition: all 100ms ease-in-out;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 
     &:hover {
-        border: 2px solid #b7b500 !important;
+        transform: translateY(1px);
+        box-shadow: 0px 4px 7px 0px #999999;
     }
 }
 
@@ -114,17 +116,23 @@
     font-size: 23px;
     background: #ecf0f1;
     color: #2e2e2e;
-    border: 2px solid black;
+    border: 2px solid #2e2e2e;
+    border-radius: 10px;
     width: 150px;
     height: 48px;
     font-weight: 500;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
-
+    transition: all 200ms ease-in-out;
     &:hover {
-        border: 2px solid #b7b500 !important;
+        transform: translateY(1px);
+        box-shadow: 0px 4px 7px 0px #999999;
     }
+}
+
+.vizualize_btn {
+    border: 2px solid #cc91ca !important;
 }
 
 .let_wrapper {
@@ -134,15 +142,15 @@
 .array_wrapper {
     .left_bracket_div {
         position: relative;
-        border-left: 5px solid black;
+        border-left: 5px solid #2e2e2e;
         height: 300px;
         width: 20px;
     }
 
     .left_bracket {
         position: absolute;
-        border-top: 5px solid black;
-        border-bottom: 5px solid black;
+        border-top: 5px solid #2e2e2e;
+        border-bottom: 5px solid #2e2e2e;
         height: 290px;
         width: 20px;
     }
@@ -164,30 +172,30 @@
 
     .right_bracket_div {
         position: relative;
-        border-right: 5px solid black;
+        border-right: 5px solid #2e2e2e;
         height: 300px;
         width: 20px;
     }
 
     .right_bracket {
         position: absolute;
-        border-top: 5px solid black;
-        border-bottom: 5px solid black;
+        border-top: 5px solid #2e2e2e;
+        border-bottom: 5px solid #2e2e2e;
         height: 290px;
         width: 20px;
     }
 }
 
-.footer_wrapper {
+.console_wrapper {
     margin-top: 50px;
     width: 80%;
 }
 .console {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-
+    min-height: 50px;
     width: 100%;
     max-width: 1000px;
     bottom: 0px;
@@ -201,11 +209,26 @@
     .output {
         color: #ecf0f1;
         font-size: 17px;
-        margin-bottom: 16px;
     }
 }
 
 @media (max-width: 650px) {
+    .main_wrapper {
+        margin-top: 50px;
+    }
+
+    .left_bracket_div {
+        width: 10px !important;
+    }
+
+    .right_bracket_div {
+        width: 10px !important;
+    }
+
+    .right_bracket {
+        left: -10px !important;
+    }
+
     .array_element {
         margin-left: 1px !important;
         margin-right: 1px !important;
@@ -218,6 +241,7 @@
 
     .buttons_wrapper {
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .action_btn {
@@ -226,13 +250,19 @@
         font-size: 13px;
     }
 
-    .footer_wrapper {
-        margin-top: 30px;
+    .console_wrapper {
+        margin-top: 10px;
         width: 100%;
+
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
     }
 
     .function_div {
-       height: 50px;
+        height: 50px;
 
         h2 {
             font-size: 15px !important;
@@ -241,23 +271,27 @@
 
     .method_btn {
         font-size: 13px;
-        
         width: 75px;
     }
 
+    .action_btn {
+        border-radius: 5px;
+    }
 
-        .openMethods {
-            .method_btn {
-                height: 30px !important;
-                transform: scale(1);
-            }
+    .openMethods {
+        .method_btn {
+            height: 30px !important;
+            border-radius: 5px;
+            transform: scale(1);
         }
-      
-        .methods_div {
-            width: 100%;
-            max-width: 95%;
-        }
-    
-   
+    }
 
+    .methods_div {
+        width: 100%;
+        max-width: 95%;
+    }
+
+    .console {
+        width: 90%;
+    }
 }

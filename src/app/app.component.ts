@@ -204,7 +204,8 @@ export class AppComponent {
       this.output.nativeElement.innerHTML = this.someFunction();
     }
     if (this.methods.filterSelect) {
-      this.output.nativeElement.innerHTML = this.filterFunction();
+      this.filterFunction();
+      this.output.nativeElement.innerHTML = this.currentArray.join(', '); 
     }
     if (this.methods.sortSelect) {
       this.output.nativeElement.innerHTML = this.currentArray.join(', ');

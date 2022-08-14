@@ -8,18 +8,17 @@
 }
 
 .logo {
-
     .visual_logo {
         color: #424949;
-    font-size: 25px;
-    margin-bottom: 0px;
-    margin-top: -14px;
-    margin-left: -11px;
+        font-size: 25px;
+        margin-bottom: 0px;
+        margin-top: -14px;
+        margin-left: -11px;
     }
 
     .array_logo {
         font-size: 40px;
-        background: -webkit-linear-gradient(#9a9a04, #e0dd00);;
+        background: -webkit-linear-gradient(#9a9a04, #e0dd00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
@@ -30,16 +29,17 @@
 @media (max-width: 650px) {
     .logo {
         .array_logo {
-            font-size: 30px !important;
+            font-size: 25px;
         }
-    
+
         .visual_logo {
-            font-size: 20px !important;
+            font-size: 17px;
+            margin-top: -5px;
+            margin-left: 0px;
         }
     }
 
     .navbar {
-        height: 50px !important;
+        height: 50px;
     }
-
 }
