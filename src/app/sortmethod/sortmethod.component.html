@@ -12,17 +12,17 @@
         <p> <em>"This method is used to arrange/sort array’s elements either in ascending or descending order.
                 We have all used it on websites to sort items by price for example."</em></p>
     </div>
-    <h2>Code Example</h2>
+    <h2>Insertion Sort Algorythm</h2>
     <code class="codeblock">
                     <p class="margin_bottom"><b class="blue">let </b> <b class="lightblue"> numbers</b> = [<b class="green">6, 3, 2, 4, 5, 1, 7</b>];</p>
                     <p><b class="return">for</b>(<b class="blue">let</b><b class="lightblue"> i</b> = <b class="green">1</b>; <b class="lightblue"> i</b> &lt;  <b class="lightblue"> numbers.length</b>; <b class="lightblue"> i</b>++) &#123; 	</p>
                     <p class="left_20"> <b class="blue">let</b> <b class="lightblue"> current</b> = <b class="lightblue"> numbers</b>[<b class="lightblue">i</b>];</p>
                     <p class="left_20"><b class="blue">let</b> <b class="lightblue"> j</b> = <b class="lightblue">i</b><b class="green"> -1</b>; </p>
-                    <p class="left_40"><b class="return">while</b> ((<b class="lightblue"> j</b> > -<b class="green">1</b>) && (<b class="lightblue">current</b> &lt; <b class="lightblue"> numbers</b>[<b class="lightblue"> j</b>])) &#123;</p>
-                    <p class="left_60"><b class="lightblue"> numbers</b>[<b class="lightblue"> j</b>+ <b class="green">1</b>] = <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>];
+                    <p class="left_40"><b class="return">while</b> ((<b class="lightblue">j</b> > -<b class="green">1</b>) && (<b class="lightblue">current</b> &lt; <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>])) &#123;</p>
+                    <p class="left_60"><b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>];
                     <b class="lightblue"> j</b>--;</p>
                     <p class="left_40"> &#125;</p>
-                    <p class="left_40"> <b class="lightblue"> numbers</b>[<b class="lightblue"> j</b>+ <b class="green">1</b>] = <b class="lightblue"> current</b>;</p>
+                    <p class="left_40"> <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> current</b>;</p>
                     <p class="margin_bottom"> &#125;</p>
                     <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">numbers</b>);</p>
                      <p><b class="green">//Output = [1, 2, 3, 4, 5, 6, 7,]</b></p>
