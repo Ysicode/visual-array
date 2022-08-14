@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { MethodLinksComponent } from './method-links/method-links.component';
+import { FiltermethodComponent } from './filtermethod/filtermethod.component';
+import { SortmethodComponent } from './sortmethod/sortmethod.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MethodLinksComponent } from './method-links/method-links.component';
     NavbarComponent,
     FooterComponent,
     ContentComponent,
-    MethodLinksComponent
+    MethodLinksComponent,
+    FiltermethodComponent,
+    SortmethodComponent
   ],
   imports: [
     BrowserModule,

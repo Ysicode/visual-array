@@ -11,6 +11,8 @@ export class AppComponent {
   @ViewChild("output") output: ElementRef;
   myArr = Array(62);
   showMethodButtons = false;
+  openOverlay = false;
+  elementFound = false;
   currentArrayIndex: number = 0;
   sortedItem: number = 0;
   arrayValue: number;
@@ -107,7 +109,9 @@ export class AppComponent {
         this.showOutput();
         return
       }
-      arrElement.style.background = `#cc91ca`;
+      if (!this.elementFound) {
+        arrElement.style.background = `#cc91ca`;
+      }
       this.checkSelectedMethod(arrElement);
       this.currentArrayIndex++;
       this.animateSpeed(elements, 20)
@@ -138,16 +142,18 @@ export class AppComponent {
 
   findIndexOfElement(arrElement: any) {
     const element = this.currentArray.findIndex(element => element == this.currentArray[this.findElement])
-    if (this.currentArrayIndex == element) {
+    if (this.currentArrayIndex == element && !this.elementFound) {
       arrElement.style.background = `red`;
+      this.elementFound = true;
       this.showOutput();
     }
   }
 
   findSameElement(arrElement: any) {
     const element = this.currentArray.find(element => element == this.currentArray[this.findElement])
-    if (this.currentArray[this.currentArrayIndex] == element) {
+    if (this.currentArray[this.currentArrayIndex] == element && !this.elementFound) {
       arrElement.style.background = `red`;
+      this.elementFound = true;
       this.showOutput();
     }
   }
@@ -204,8 +210,8 @@ export class AppComponent {
       this.output.nativeElement.innerHTML = this.someFunction();
     }
     if (this.methods.filterSelect) {
-      this.filterFunction();
-      this.output.nativeElement.innerHTML = this.currentArray.join(', '); 
+      let filtered = this.filterFunction();
+      this.output.nativeElement.innerHTML = filtered.join(', '); 
     }
     if (this.methods.sortSelect) {
       this.output.nativeElement.innerHTML = this.currentArray.join(', ');
@@ -263,6 +269,7 @@ export class AppComponent {
 
   refreshBackground() {
     this.currentArrayIndex = 0;
+    this.elementFound = false;
     let elements: any = Array.from(document.getElementsByClassName('array_element'));
     elements.forEach((element: any) => {
       element.style.background = '';
