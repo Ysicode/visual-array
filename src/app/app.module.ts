@@ -10,6 +10,7 @@ import { FiltermethodComponent } from './filtermethod/filtermethod.component';
 import { SortmethodComponent } from './sortmethod/sortmethod.component';
 import { SomeMethodComponent } from './some-method/some-method.component';
 import { EveryMethodComponent } from './every-method/every-method.component';
+import { MapMethodComponent } from './map-method/map-method.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EveryMethodComponent } from './every-method/every-method.component';
     FiltermethodComponent,
     SortmethodComponent,
     SomeMethodComponent,
-    EveryMethodComponent
+    EveryMethodComponent,
+    MapMethodComponent
   ],
   imports: [
     BrowserModule,
