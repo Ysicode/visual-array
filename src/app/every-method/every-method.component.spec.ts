@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MethodLinksComponent } from './method-links.component';
+import { EveryMethodComponent } from './every-method.component';
 
-describe('MethodLinksComponent', () => {
-  let component: MethodLinksComponent;
-  let fixture: ComponentFixture<MethodLinksComponent>;
+describe('EveryMethodComponent', () => {
+  let component: EveryMethodComponent;
+  let fixture: ComponentFixture<EveryMethodComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MethodLinksComponent ]
+      declarations: [ EveryMethodComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MethodLinksComponent);
+    fixture = TestBed.createComponent(EveryMethodComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

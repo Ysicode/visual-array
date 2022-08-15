@@ -1,0 +1,25 @@
+<div class="description_wrapper d_flex_column">
+    <h2 class="headline">What does the JavaScript some function do?</h2>
+    <p>The some function executes the callback function once for each element in the array until it finds the one where
+        the callback function returns a true. The some method immediately returns true and doesn’t evaluate the
+        remaining elements.
+        If no element causes the callback to return true, the some method returns false.</p>
+    <div class="comment">
+        <p> <em>"This method checks if at least one element in the array passes the condition, returning true or
+                false as appropriate."</em></p>
+    </div>
+    <h2>Code Example</h2>
+    <code class="codeblock">
+        <p class="margin_bottom"><b class="blue">let </b> <b class="lightblue"> numbers</b> = [<b class="green">1, 2, 3, 4, 5, 6, 7</b>];</p>
+        <p><b class="blue">let </b><b class="lightblue">greaterFive</b> = <b class="lightblue">numbers</b>.<b class="yellow">some</b>(<b class="lightblue">number</b> <b class="blue"> =></b> <b class="lightblue"> number</b> > <b class="green">5</b>);</p>
+        <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">greaterFive</b>);</p>
+        <p><b class="green">//Output = true</b></p>
+    </code>
+    <code class="codeblock">
+        <p><b class="blue">let </b><b class="lightblue">smallerOne</b> = <b class="lightblue">numbers</b>.<b class="yellow">some</b>(<b class="lightblue">number</b> <b class="blue"> =></b> <b class="lightblue"> number</b> &lt; <b class="green">1</b>);</p>
+        <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">smallerOne</b>);</p>
+        <p><b class="green">//Output = false</b></p>       
+    </code>      
+    <p class="read_more">Read more on</p>
+    <a target="blank" href="https://www.javascripttutorial.net/javascript-array-some/">JS Tutorial</a>
+</div>

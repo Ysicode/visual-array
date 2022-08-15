@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
-import { MethodLinksComponent } from './method-links/method-links.component';
 import { FiltermethodComponent } from './filtermethod/filtermethod.component';
 import { SortmethodComponent } from './sortmethod/sortmethod.component';
+import { SomeMethodComponent } from './some-method/some-method.component';
+import { EveryMethodComponent } from './every-method/every-method.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { SortmethodComponent } from './sortmethod/sortmethod.component';
     NavbarComponent,
     FooterComponent,
     ContentComponent,
-    MethodLinksComponent,
     FiltermethodComponent,
-    SortmethodComponent
+    SortmethodComponent,
+    SomeMethodComponent,
+    EveryMethodComponent
   ],
   imports: [
     BrowserModule,
