@@ -12,6 +12,7 @@ import { SomeMethodComponent } from './some-method/some-method.component';
 import { EveryMethodComponent } from './every-method/every-method.component';
 import { MapMethodComponent } from './map-method/map-method.component';
 import { FindMethodComponent } from './find-method/find-method.component';
+import { FindIndexMethodComponent } from './find-index-method/find-index-method.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FindMethodComponent } from './find-method/find-method.component';
     SomeMethodComponent,
     EveryMethodComponent,
     MapMethodComponent,
-    FindMethodComponent
+    FindMethodComponent,
+    FindIndexMethodComponent
   ],
   imports: [
     BrowserModule,
