@@ -86,3 +86,21 @@ body {
 .margin_bottom {
     margin-bottom: 20px !important;
 }
+
+@media (max-width: 650px) {
+    .left_20 {
+        margin-left: 10px;
+    }
+    
+    .left_40 {
+        margin-left: 20px;
+    }
+    
+    .left_60 {
+        margin-left: 30px;
+    }
+    
+    .left_80 {
+        margin-left: 40px;
+    }
+}

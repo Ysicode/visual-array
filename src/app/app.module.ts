@@ -13,6 +13,8 @@ import { EveryMethodComponent } from './every-method/every-method.component';
 import { MapMethodComponent } from './map-method/map-method.component';
 import { FindMethodComponent } from './find-method/find-method.component';
 import { FindIndexMethodComponent } from './find-index-method/find-index-method.component';
+import { IncludesMethodComponent } from './includes-method/includes-method.component';
+import { ReverseMethodComponent } from './reverse-method/reverse-method.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FindIndexMethodComponent } from './find-index-method/find-index-method.
     EveryMethodComponent,
     MapMethodComponent,
     FindMethodComponent,
-    FindIndexMethodComponent
+    FindIndexMethodComponent,
+    IncludesMethodComponent,
+    ReverseMethodComponent
   ],
   imports: [
     BrowserModule,

@@ -81,8 +81,7 @@
                     class="lightblue"> element </b> <b class="white_color"> == </b> <b class="green"> {{ getValue() }}</b> <b
                     class="white_color"> )</b>
             </h2>
-        </div>
-       
+        </div>  
     </div>
     <div [class.openMethods]="showMethodButtons" class="methods_div d_flex">
         <button class="method_btn"  (click)="selectMethod('mapSelect')">map</button>
@@ -94,8 +93,6 @@
         <button class="method_btn" (click)="selectMethod('findIndexSelect')">find Index</button>
         <button class="method_btn" (click)="selectMethod('includesSelect')">includes</button>
         <button class="method_btn" (click)="selectMethod('reverseSelect')">reverse</button>
-
-
     </div>
     <div class="array_div d_flex_column">
         <div class="buttons_wrapper d_flex">
@@ -104,7 +101,6 @@
             <button (click)="generateArr()" class="action_btn">new arr</button>
 
         </div>
-
         <div class="let_wrapper d_flex">
             <h2>let arr =</h2>
         </div>
@@ -128,12 +124,10 @@
             <div class="d_flex">
                 <div #output class="output"></div>
                
-            </div>
-            
+            </div>        
         </div>
     </div>
 </div>
-
 
 <app-filtermethod *ngIf="methods.filterSelect" class="d_flex"></app-filtermethod>
 <app-sortmethod *ngIf="methods.sortSelect" class="d_flex"></app-sortmethod>
@@ -142,4 +136,7 @@
 <app-map-method *ngIf="methods.mapSelect" class="d_flex"></app-map-method>
 <app-find-method *ngIf="methods.findSelect" class="d_flex"></app-find-method>
 <app-find-index-method *ngIf="methods.findIndexSelect" class="d_flex"></app-find-index-method>
+<app-includes-method *ngIf="methods.includesSelect" class="d_flex"></app-includes-method>
+<app-reverse-method *ngIf="methods.reverseSelect" class="d_flex"></app-reverse-method>
+
 <app-footer></app-footer>
