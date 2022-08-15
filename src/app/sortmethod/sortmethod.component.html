@@ -6,28 +6,41 @@
         even objects. The sort order is determined by the compareFun callback method, which is what allows you to
         determine the sort order or what object properties determine the sort order.
         In this example i had to rebuild the insertion sort algorithm, so i can vizualize it in slow motion.
-
     </p>
     <div class="comment">
         <p> <em>"This method is used to arrange/sort array’s elements either in ascending or descending order.
-                We have all used it on websites to sort items by price for example."</em></p>
+                You might used it already on websites to sort items by price for example."</em></p>
     </div>
     <h2>Insertion Sort Algorythm</h2>
     <code class="codeblock">
-                    <p class="margin_bottom"><b class="blue">let </b> <b class="lightblue"> numbers</b> = [<b class="green">6, 3, 2, 4, 5, 1, 7</b>];</p>
-                    <p><b class="return">for</b>(<b class="blue">let</b><b class="lightblue"> i</b> = <b class="green">1</b>; <b class="lightblue"> i</b> &lt;  <b class="lightblue"> numbers.length</b>; <b class="lightblue"> i</b>++) &#123; 	</p>
-                    <p class="left_20"> <b class="blue">let</b> <b class="lightblue"> current</b> = <b class="lightblue"> numbers</b>[<b class="lightblue">i</b>];</p>
-                    <p class="left_20"><b class="blue">let</b> <b class="lightblue"> j</b> = <b class="lightblue">i</b><b class="green"> -1</b>; </p>
-                    <p class="left_40"><b class="return">while</b> ((<b class="lightblue">j</b> > -<b class="green">1</b>) && (<b class="lightblue">current</b> &lt; <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>])) &#123;</p>
-                    <p class="left_60"><b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>];
-                    <b class="lightblue"> j</b>--;</p>
-                    <p class="left_40"> &#125;</p>
-                    <p class="left_40"> <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> current</b>;</p>
-                    <p class="margin_bottom"> &#125;</p>
-                    <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">numbers</b>);</p>
-                     <p><b class="green">//Output = [1, 2, 3, 4, 5, 6, 7,]</b></p>
+        <p class="margin_bottom"><b class="blue">let </b> <b class="lightblue"> numbers</b> = [<b class="green">6, 3, 2, 4, 5, 1, 7</b>];</p>
+        <p><b class="blue">function</b> <b class="yellow"> insertionSort</b>() &#123;</p>
+        <p class="left_20"><b class="return">for</b>(<b class="blue">let</b><b class="lightblue"> i</b> = <b class="green">1</b>; <b class="lightblue"> i</b> &lt;  <b class="lightblue"> numbers.length</b>; <b class="lightblue"> i</b>++) &#123; 	</p>
+        <p class="left_40"> <b class="blue">let</b> <b class="lightblue"> current</b> = <b class="lightblue"> numbers</b>[<b class="lightblue">i</b>];</p>
+        <p class="left_40"><b class="blue">let</b> <b class="lightblue"> j</b> = <b class="lightblue">i</b><b class="green"> -1</b>; </p>
+        <p class="left_60"><b class="return">while</b> ((<b class="lightblue">j</b> > -<b class="green">1</b>) && (<b class="lightblue">current</b> &lt; <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>])) &#123;</p>
+        <p class="left_80"><b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>];
+        <b class="lightblue"> j</b>--;</p>
+        <p class="left_60"> &#125;</p>
+        <p class="left_60"> <b class="lightblue"> numbers</b>[<b class="lightblue">j</b>+ <b class="green">1</b>] = <b class="lightblue"> current</b>;</p>
+        <p class="left_20"> &#125;</p>
+        <p class="left_20"><b class="return">return</b> <b class="lightblue">numbers</b>;</p>
+        <p class="margin_bottom "> &#125;</p>
+        <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="yellow">insertionSort</b>());</p>
+        <p><b class="green">//Output = [1, 2, 3, 4, 5, 6, 7]</b></p>
+    </code>
+
+    <h2>How to use it in an arrow function</h2>
+    <code class="codeblock">
+        <p><b class="lightblue">ascend</b> = <b class="lightblue">numbers</b>.<b class="yellow">sort</b>((<b class="lightblue">a</b>, <b class="lightblue">b</b>) <b class="blue">=></b> <b class="lightblue"> a</b> > <b class="lightblue">b</b> ? <b class="green">1</b> : -<b class="green">1</b>);</p>
+        <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">ascend</b>);</p>
+       <p><b class="green">//Output = [1, 2, 3, 4, 5, 6, 7]</b></p>
+    </code>
+    <code class="codeblock">
+        <p><b class="lightblue">descend</b> = <b class="lightblue">numbers</b>.<b class="yellow">sort</b>((<b class="lightblue">a</b>, <b class="lightblue">b</b>) <b class="blue">=></b> <b class="lightblue"> a</b> > <b class="lightblue">b</b> ? -<b class="green">1</b> : <b class="green">1</b>);</p>
+        <p class="margin_bottom"><b class="lightblue">console</b>.<b class="yellow">log</b>(<b class="lightblue">descend</b>);</p>
+         <p><b class="green">//Output = [7, 6, 5, 4, 3, 2, 1]</b></p>
     </code>
     <p class="read_more">Read more on</p>
     <a target="blank" href="https://stackabuse.com/sorting-arrays-in-javascript/">StackAbuse &gt;</a>
-
 </div>

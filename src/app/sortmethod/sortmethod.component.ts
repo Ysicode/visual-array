@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sortmethod.component.scss']
 })
 export class SortmethodComponent implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
