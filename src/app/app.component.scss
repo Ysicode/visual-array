@@ -163,11 +163,26 @@
         width: 500px;
     }
 
+    .array_numbers {
+        align-items: center !important;
+        flex-wrap: wrap;
+        }
+
     .array_element {
         margin-left: 1.5px;
         margin-right: 1.5px;
         width: 5px;
         background: linear-gradient(#9a9a04, #e0dd00);
+    }
+
+    .array_number {
+        width: fit-content;
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 20px;
+        color: #9a9a04;
+        background: #ecf0f1 !important;
+        font-weight: bold;
     }
 
     .right_bracket_div {

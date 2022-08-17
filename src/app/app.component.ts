@@ -24,6 +24,8 @@ export class AppComponent {
   sortPosJ: any;
   findElement: number = Math.floor(Math.random() * 60);
 
+  numberViewSelect = true;
+
   methods = {
     mapSelect: false,
     everySelect: false,
@@ -42,11 +44,11 @@ export class AppComponent {
     this.generateArr();
   }
 
-/** 
- * This function is used to set a random value in the condition of the function
- *  
- * @returns - a value of the current array on a random index
- */
+  /** 
+   * This function is used to set a random value in the condition of the function
+   *  
+   * @returns - a value of the current array on a random index
+   */
   getValue() {
     let value = this.currentArray[this.findElement]
     return value
@@ -75,7 +77,12 @@ export class AppComponent {
       let element: any = elements[i]
       this.arrayValue = Math.floor(Math.random() * 270);
       this.currentArray.push(this.arrayValue);
-      element.style.height = this.getheight(i);
+      if (this.numberViewSelect) {
+        element.innerHTML = this.currentArray[i] + ',';
+      } else {
+        element.style.height = this.getheight(i);
+      }
+
     }
   }
 
@@ -121,6 +128,7 @@ export class AppComponent {
     elements.forEach((element: any) => {
       element.style.background = '';
       element.style.background = 'linear-gradient(#9a9a04, #e0dd00);'
+      element.style.color = '#9a9a04';
     })
     this.currentArrayIndex = 0;
     this.animate(elements);
@@ -148,6 +156,7 @@ export class AppComponent {
       }
       if (!this.elementFound) {
         arrElement.style.background = `#cc91ca`;
+        arrElement.style.color = `#cc91ca`;
       }
       this.checkSelectedMethod(arrElement);
       this.currentArrayIndex++;
@@ -198,6 +207,7 @@ export class AppComponent {
     const element = this.currentArray.findIndex(element => element == this.currentArray[this.findElement])
     if (this.currentArrayIndex == element && !this.elementFound) {
       arrElement.style.background = `red`;
+      arrElement.style.color = `red`;
       this.elementFound = true;
       this.showOutput();
     }
@@ -213,6 +223,7 @@ export class AppComponent {
     const element = this.currentArray.find(element => element == this.currentArray[this.findElement])
     if (this.currentArray[this.currentArrayIndex] == element && !this.elementFound) {
       arrElement.style.background = `red`;
+      arrElement.style.color = `red`;
       this.elementFound = true;
       this.showOutput();
     }
@@ -230,9 +241,9 @@ export class AppComponent {
       return
     }
     this.startReverseAnimation(elements);
-      this.currentArrayIndex++;
-      this.reverseCurrentArrayIndex--;
-  
+    this.currentArrayIndex++;
+    this.reverseCurrentArrayIndex--;
+
     setTimeout(() => {
       this.animateReverseArray(elements);
     }, 100)
@@ -254,9 +265,15 @@ export class AppComponent {
    */
   startReverseAnimation(elements: any) {
     elements[this.currentArrayIndex].style.background = '#cc91ca';
-    elements[this.currentArrayIndex].style.height = this.currentArray[this.reverseCurrentArrayIndex] + `px`;
+    elements[this.currentArrayIndex].style.color = '#cc91ca';
     elements[this.reverseCurrentArrayIndex].style.background = '#cc91ca';
-    elements[this.reverseCurrentArrayIndex].style.height = this.currentArray[this.currentArrayIndex] + `px`;
+    elements[this.reverseCurrentArrayIndex].style.color = '#cc91ca';
+    elements[this.currentArrayIndex].innerHTML = this.currentArray[this.reverseCurrentArrayIndex];
+    elements[this.reverseCurrentArrayIndex].innerHTML= this.currentArray[this.currentArrayIndex];
+    if (!this.numberViewSelect) {
+      elements[this.currentArrayIndex].style.height = this.currentArray[this.reverseCurrentArrayIndex] + `px`;
+      elements[this.reverseCurrentArrayIndex].style.height = this.currentArray[this.currentArrayIndex] + `px`;
+    }
   }
 
   /**
@@ -296,7 +313,7 @@ export class AppComponent {
     }
     if (this.methods.filterSelect) {
       let filtered = this.filterFunction();
-      this.output.nativeElement.innerHTML = filtered.join(', '); 
+      this.output.nativeElement.innerHTML = filtered.join(', ');
     }
     if (this.methods.sortSelect) {
       this.output.nativeElement.innerHTML = this.currentArray.join(', ');
@@ -312,7 +329,7 @@ export class AppComponent {
     }
     if (this.methods.reverseSelect) {
       this.reverseFunction();
-      this.output.nativeElement.innerHTML = this.currentArray.join(', '); 
+      this.output.nativeElement.innerHTML = this.currentArray.join(', ');
     }
   }
 

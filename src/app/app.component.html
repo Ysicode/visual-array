@@ -108,10 +108,12 @@
             <div class="left_bracket_div">
                 <div class="left_bracket"></div>
             </div>
-            <div #array class="array">
-                <div *ngFor="let item of myArr" let i = index class="array_element" >                
+            <div [class.array_numbers]="numberViewSelect" #array class="array">
+                <div [class.array_number]="numberViewSelect" *ngFor="let item of myArr" let i = index class="array_element" >                
                 </div>
+                
             </div>
+           
             <div class="right_bracket_div">
                 <div class="right_bracket"></div>
             </div>
