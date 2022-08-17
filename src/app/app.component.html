@@ -3,85 +3,85 @@
 
 <div class="main_wrapper d_flex_column">
     <div class="function_div d_flex_column">
-        <div *ngIf="methods.mapSelect" class="d_flex"> 
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.mapSelect" class="d_flex"> 
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">map</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
-                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi` </b> <b
-                    class="white_color"> )</b>
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> + </b> <b class="green"> `hi`</b> <b
+                    class="white_color">)</b>
             </h2>
            
-        </div>
+        </code>
 
-        <div *ngIf="methods.includesSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.includesSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">includes</b> <b
-                    class="white_color">( </b> <b class="green"> {{ getValue() }} </b> <b
-                    class="white_color"> )</b>
+                    class="white_color">(</b> <b class="green">{{ getValue() }}</b> <b
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.reverseSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.reverseSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">reverse</b> <b
-                    class="white_color">( </b> <b
-                    class="white_color"> )</b>
+                    class="white_color">(</b> <b
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.everySelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.everySelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">every</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
-                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 20 </b> <b
-                    class="white_color"> )</b>
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
+                    class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 20</b> <b
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.someSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.someSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">some</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 100</b> <b
-                    class="white_color"> )</b>
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.filterSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.filterSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">filter</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> > </b> <b class="green"> 200</b> <b
-                    class="white_color"> )</b>
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.sortSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.sortSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">sort</b> <b
-                    class="white_color">( </b><b class="white_color">( </b> <b class="lightblue"> a</b><b class="white_color">, <b class="lightblue"> b </b><b class="white_color"> ) </b></b> <b class="blue"> => </b><b class="lightblue"> a</b><b class="white_color"> ></b> <b class="lightblue"> b</b> <b class="white_color"> ?</b>
+                    class="white_color">(</b><b class="white_color">(</b> <b class="lightblue">a</b><b class="white_color">, <b class="lightblue"> b</b><b class="white_color">) </b></b> <b class="blue"> => </b><b class="lightblue"> a</b><b class="white_color"> ></b> <b class="lightblue"> b</b> <b class="white_color"> ?</b>
                  <b class="green"> 1</b> <b class="white_color"> : </b><b class="green"> -1</b> <b
-                    class="white_color"> )</b>
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.findSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.findSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">find</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> == </b> <b class="green"> {{ getValue() }}</b> <b
-                    class="white_color"> )</b>
+                    class="white_color">)</b>
             </h2>
-        </div>
+        </code>
 
-        <div *ngIf="methods.findIndexSelect" class="d_flex">
-            <h2 class="function_text"><b class="return">return</b> <b class="blue">this</b> <b class="white_color">.</b>
+        <code *ngIf="methods.findIndexSelect" class="d_flex">
+            <h2 class="function_text">
                 <b class="lightblue">arr</b> <b class="white_color">.</b> <b class="yellow">findIndex</b> <b
-                    class="white_color">( </b> <b class="lightblue"> element </b> <b class="blue"> => </b> <b
+                    class="white_color">(</b> <b class="lightblue">element </b> <b class="blue"> => </b> <b
                     class="lightblue"> element </b> <b class="white_color"> == </b> <b class="green"> {{ getValue() }}</b> <b
-                    class="white_color"> )</b>
+                    class="white_color">)</b>
             </h2>
-        </div>  
+        </code>  
     </div>
     <div [class.openMethods]="showMethodButtons" class="methods_div d_flex">
         <button class="method_btn"  (click)="selectMethod('mapSelect')">map</button>
@@ -110,14 +110,27 @@
             </div>
             <div [class.array_numbers]="numberViewSelect" #array class="array">
                 <div [class.array_number]="numberViewSelect" *ngFor="let item of myArr" let i = index class="array_element" >                
-                </div>
-                
-            </div>
-           
+                </div>          
+            </div>    
             <div class="right_bracket_div">
                 <div class="right_bracket"></div>
             </div>
         </div>
+        <div class="d_flex">
+            <div (click)="generateArr(); numberViewSelect = false" [class.colored_border]="!numberViewSelect" class="view_selection_button">
+                <div class="view_columns"></div>
+                <div class="view_columns height50"></div>
+                <div class="view_columns height100"></div>
+            </div>
+            <div (click)="generateArr(); numberViewSelect = true" [class.colored_border]="numberViewSelect" class="view_selection_button alignCenter">
+                <div class="view_numbers d_flex">4</div>
+                <div class="view_numbers d_flex">2</div>
+                <div class="view_numbers d_flex">1</div>
+                <div class="view_numbers d_flex">3</div>
+            </div>
+        </div>
+       
+
     </div>
 
     <div class="console_wrapper d_flex_column">

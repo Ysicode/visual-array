@@ -24,7 +24,7 @@ export class AppComponent {
   sortPosJ: any;
   findElement: number = Math.floor(Math.random() * 60);
 
-  numberViewSelect = true;
+  numberViewSelect = false;
 
   methods = {
     mapSelect: false,
@@ -79,10 +79,11 @@ export class AppComponent {
       this.currentArray.push(this.arrayValue);
       if (this.numberViewSelect) {
         element.innerHTML = this.currentArray[i] + ',';
+        element.style.height = '20px';
       } else {
+        element.innerHTML = '';
         element.style.height = this.getheight(i);
       }
-
     }
   }
 
@@ -294,6 +295,7 @@ export class AppComponent {
   checkMatchingItems(arrElement: any) {
     if (this.currentArray[this.currentArrayIndex] > 200) {
       arrElement.style.background = `red`;
+      arrElement.style.color = `red`;
     }
   }
 
@@ -423,6 +425,7 @@ export class AppComponent {
     elements.forEach((element: any) => {
       element.style.background = '';
       element.style.background = 'linear-gradient(#9a9a04, #e0dd00);'
+      element.style.color = '#9a9a04'
     })
   }
 
@@ -439,7 +442,8 @@ export class AppComponent {
       this.showOutput();
       return
     } else {
-      elements[this.sortPosI].style.background = '#cc91ca'
+      elements[this.sortPosI].style.background = '#cc91ca';
+      elements[this.sortPosI].style.color = '#cc91ca';
       if (this.sortPosI < this.currentArray.length) {
         this.sortPosI++
         let current = this.currentArray[this.sortPosI];
@@ -450,14 +454,25 @@ export class AppComponent {
         }
         this.currentArray[this.sortPosJ + 1] = current;
       }
-
+      this.setNewValues(elements);
       setTimeout(() => {
         this.insertionSort(elements)
       }, 100)
+    }
+  }
 
-      for (let i = 0; i < elements.length; i++) {
-        let element = elements[i];
+  /**
+   * This function is used to set the inner html and height to the new sorted value at
+   * 
+   * @param elements - an array of all array html elements by classname
+   */
+  setNewValues(elements: any) {
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (!this.numberViewSelect) {
         element.style.height = this.getheight(i);
+      } else {
+        element.innerHTML = this.currentArray[i];
       }
     }
   }
@@ -467,6 +482,22 @@ export class AppComponent {
    */
   openMethods() {
     this.showMethodButtons = !this.showMethodButtons;
+  }
+
+  /**
+   * This function is used to set the variable numberViewSelect true
+   */
+  selectNumberView() {
+    this.numberViewSelect = true;
+    this.generateArr();
+  }
+
+  /**
+   *  This function is used to set the variable numberViewSelect false
+   */
+  selectColumnView() {
+    this.numberViewSelect = false;
+    this.generateArr();
   }
 
 }

@@ -8,6 +8,7 @@
     width: 100%;
 
     h2 {
+        font-size: 23px;
         margin-top: 0px;
         margin-bottom: 0px;
     }
@@ -166,7 +167,7 @@
     .array_numbers {
         align-items: center !important;
         flex-wrap: wrap;
-        }
+    }
 
     .array_element {
         margin-left: 1.5px;
@@ -176,6 +177,9 @@
     }
 
     .array_number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: fit-content;
         margin-left: 15px;
         margin-right: 15px;
@@ -199,6 +203,55 @@
         height: 290px;
         width: 20px;
     }
+}
+
+.view_selection_button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+    width: 30px;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+.colored_border {
+    border: 2px solid #cc91ca;
+}
+
+.alignCenter {
+    align-items: center !important;
+    flex-wrap: wrap;
+}
+
+.view_columns {
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 8px;
+    background: grey;
+    height: 20%;
+}
+
+.view_numbers {
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    font-size: 15px;
+    color: grey;
+    font-weight: bold;
+}
+
+.height50 {
+    height: 50%;
+}
+
+.height100 {
+    height: 100%;
 }
 
 .console_wrapper {
@@ -227,8 +280,6 @@
     }
 }
 
-
-
 @media (max-width: 650px) {
     .main_wrapper {
         margin-top: 50px;
@@ -247,13 +298,23 @@
     }
 
     .array_element {
-        margin-left: 1px !important;
-        margin-right: 1px !important;
-        width: 3px !important;
+        margin-left: 1px ;
+        margin-right: 1px ;
+        width: 3px ;
     }
 
     .array {
         width: 316px !important;
+    }
+
+    .array_number {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+    .view_selection_button {
+        margin-bottom: 20px;
     }
 
     .buttons_wrapper {
@@ -288,7 +349,7 @@
 
     .method_btn {
         font-size: 13px;
-        width: 85px;
+        width: 95px;
     }
 
     .action_btn {
