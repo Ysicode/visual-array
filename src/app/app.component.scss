@@ -280,6 +280,41 @@
     }
 }
 
+.help {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #cc91ca;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 2px 7px 0px #999999;
+    }
+
+    p {
+        font-size: 35px;
+        color: #2e2e2e;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+.help_video_bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background: #0d0b0bde;
+}
+
 @media (max-width: 650px) {
     .main_wrapper {
         margin-top: 50px;

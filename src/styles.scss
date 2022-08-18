@@ -87,6 +87,10 @@ body {
     margin-bottom: 20px !important;
 }
 
+.noScroll {
+    overflow-y: hidden;
+}
+
 @media (max-width: 650px) {
     .left_20 {
         margin-left: 10px;

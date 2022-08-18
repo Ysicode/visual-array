@@ -25,6 +25,7 @@ export class AppComponent {
   findElement: number = Math.floor(Math.random() * 60);
 
   numberViewSelect = false;
+  showHelp = false;
 
   methods = {
     mapSelect: false,
@@ -484,20 +485,13 @@ export class AppComponent {
     this.showMethodButtons = !this.showMethodButtons;
   }
 
-  /**
-   * This function is used to set the variable numberViewSelect true
-   */
-  selectNumberView() {
-    this.numberViewSelect = true;
-    this.generateArr();
+  toggleHelp() {
+  this.showHelp = ! this.showHelp;
+  document.body.classList.toggle('noScroll');
   }
 
-  /**
-   *  This function is used to set the variable numberViewSelect false
-   */
-  selectColumnView() {
-    this.numberViewSelect = false;
-    this.generateArr();
+  stopPropagation(e: Event) {
+    e.stopPropagation();
   }
 
 }
